@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block carrousel %}
+<div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+    <h1 class="display-4 fw-normal">Belajar Internet of Things</h1>
+    <p class="fs-5 text-muted">Yuk belajar IoT, dengan IoT semuanya menjadi lebih indah, mudah dan Barokah</p>
+</div>
+<div class="overflow-hidden" style="max-height: 30vh;">
+    <div class="container px-5 text-center">
+        <img src="../static/gambar.jpg" class="img-fluid border rounded-3 shadow-lg mb-4" alt="Example image"
+             width="700" height="500" loading="lazy">
+    </div>
+</div>
+
+
+<div class="px-4 pt-5 my-5 text-center">
+    <div class="col-lg-6 mx-auto">
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
+            <a href="/monitor" class="btn btn-success btn-lg px-4 me-sm-3" role="button">Monitor</a>
+            <a href="/kontrol" class="btn btn-outline-secondary btn-lg px-4" role="button">Akses kontrol</a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

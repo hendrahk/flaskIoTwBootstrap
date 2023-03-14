@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block kontrol %}
+<div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+    <h1 class="display-4 fw-normal">Halaman Kontrol</h1>
+</div>
+<main>
+    <div class="row row-cols-1 row-cols-md-2 mb-2 text-center">
+        <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm">
+                <div class="card-header py-3">
+                    <h4 class="my-0 fw-normal">Perangkat 1</h4>
+                </div>
+                <div class="card-body">
+                    <h1 class="card-title pricing-card-title">LED</h1>
+                    <ul class="list-unstyled mt-3 mb-4">
+                        <li>Status:</li>
+                        <li>{% if ledSts == 1 %}{{'ON'}}{% else: %}{{'OFF'}}{% endif %}</li>
+                    </ul>
+                    <a href="/led/on" class="w-20 h-50 btn btn-lg btn-success" role="button">Tombol ON</a>
+                    <a href="/led/off" class="w-20 h-50 btn btn-lg btn-danger" role="button">Tombol OFF</a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm">
+                <div class="card-header py-3">
+                    <h4 class="my-0 fw-normal">Perangkat 2</h4>
+                </div>
+                <div class="card-body">
+                    <h1 class="card-title pricing-card-title">Buzzer</h1>
+                    <ul class="list-unstyled mt-3 mb-4">
+                        <li>status :</li>
+                        <li>{% if bzSts == 1 %}{{'ON'}}{% else: %}{{'OFF'}}{% endif %}</li>
+                    </ul>
+                    <a href="/bz/on" class="w-20 h-50 btn btn-lg btn-success" role="button">Tombol ON</a>
+                    <a href="/bz/off" class="w-20 h-50 btn btn-lg btn-danger" role="button">Tombol OFF</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}

@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block monitor %}
+<div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+    <h1 class="display-4 fw-normal">Halaman Monitor</h1>
+</div>
+ <main>
+    <div class="row row-cols-1 row-cols-md-2 mb-2 text-center">
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal">Perangkat 1</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">LED</h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>LED adalah</li>
+              <li>singkatan dari Light Emitting Diode</li>
+              <li>atau bahasa indonesianya</li>
+              <li>Dioda yang bisa nyala</li>
+            </ul>
+            <button type="button" class="w-50 h-50 btn btn-lg btn-{% if ledSts == 1 %}{{'success'}}{% else: %}{{'danger'}}{% endif %} disabled">{% if ledSts == 1 %}{{'ON'}}{% else: %}{{'OFF'}}{% endif %}</button>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal">Perangkat 2</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">Buzzer</h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>Buzzer adalah</li>
+              <li>aktuator yang biasanya berbunyi</li>
+              <li>Titit, gak pake resistor ya..</li>
+              <li>kalau pake resistor suaranya makin kecil</li>
+            </ul>
+            <button type="button" class="w-50 h-50 btn btn-lg btn-{% if bzSts == 1 %}{{'success'}}{% else: %}{{'danger'}}{% endif %} disabled">{% if bzSts == 1 %}{{'ON'}}{% else: %}{{'OFF'}}{% endif %}</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+{% endblock %}
